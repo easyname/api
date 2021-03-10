@@ -1,0 +1,3199 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-0852f603.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-e033bdd3.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;code&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-4be8c392.svg" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="code">code</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#easyname-api" class="toc-h1 toc-link" data-title="easyname API">easyname API</a>
+          </li>
+          <li>
+            <a href="#rest-basics" class="toc-h1 toc-link" data-title="REST Basics">REST Basics</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-method-get" class="toc-h2 toc-link" data-title="HTTP Request Method GET">HTTP Request Method GET</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-method-post" class="toc-h2 toc-link" data-title="HTTP Request Method POST">HTTP Request Method POST</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-method-delete" class="toc-h2 toc-link" data-title="HTTP Request Method DELETE">HTTP Request Method DELETE</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#request-response" class="toc-h1 toc-link" data-title="Request / Response">Request / Response</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#aufbau-des-body-allgemein" class="toc-h2 toc-link" data-title="Aufbau des Body (allgemein)">Aufbau des Body (allgemein)</a>
+                  </li>
+                  <li>
+                    <a href="#berechnung-der-signatur" class="toc-h2 toc-link" data-title="Berechnung der Signatur">Berechnung der Signatur</a>
+                  </li>
+                  <li>
+                    <a href="#aufbau-des-antwort-body" class="toc-h2 toc-link" data-title="Aufbau des Antwort-Body">Aufbau des Antwort-Body</a>
+                  </li>
+                  <li>
+                    <a href="#http-status-codes" class="toc-h2 toc-link" data-title="HTTP Status Codes">HTTP Status Codes</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentifizierung" class="toc-h1 toc-link" data-title="Authentifizierung">Authentifizierung</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#header" class="toc-h2 toc-link" data-title="Header">Header</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#status-codes" class="toc-h1 toc-link" data-title="Status Codes">Status Codes</a>
+          </li>
+          <li>
+            <a href="#php-sdk" class="toc-h1 toc-link" data-title="PHP-SDK">PHP-SDK</a>
+          </li>
+          <li>
+            <a href="#domain" class="toc-h1 toc-link" data-title="Domain">Domain</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#domain-generate-authcode" class="toc-h2 toc-link" data-title="Domain Generate Authcode">Domain Generate Authcode</a>
+                  </li>
+                  <li>
+                    <a href="#domain-transfersecurity" class="toc-h2 toc-link" data-title="Domain Transfersecurity">Domain Transfersecurity</a>
+                  </li>
+                  <li>
+                    <a href="#domain-restore" class="toc-h2 toc-link" data-title="Domain Restore">Domain Restore</a>
+                  </li>
+                  <li>
+                    <a href="#domain-ownerchange" class="toc-h2 toc-link" data-title="Domain Ownerchange">Domain Ownerchange</a>
+                  </li>
+                  <li>
+                    <a href="#domain-nameserverchange" class="toc-h2 toc-link" data-title="Domain Nameserverchange">Domain Nameserverchange</a>
+                  </li>
+                  <li>
+                    <a href="#domain-index" class="toc-h2 toc-link" data-title="Domain Index">Domain Index</a>
+                  </li>
+                  <li>
+                    <a href="#domain-get" class="toc-h2 toc-link" data-title="Domain Get">Domain Get</a>
+                  </li>
+                  <li>
+                    <a href="#domain-unexpire" class="toc-h2 toc-link" data-title="Domain Unexpire">Domain Unexpire</a>
+                  </li>
+                  <li>
+                    <a href="#domain-expire" class="toc-h2 toc-link" data-title="Domain Expire">Domain Expire</a>
+                  </li>
+                  <li>
+                    <a href="#domain-delete" class="toc-h2 toc-link" data-title="Domain Delete">Domain Delete</a>
+                  </li>
+                  <li>
+                    <a href="#domain-contactchange" class="toc-h2 toc-link" data-title="Domain Contactchange">Domain Contactchange</a>
+                  </li>
+                  <li>
+                    <a href="#domain-autorenew" class="toc-h2 toc-link" data-title="Domain Autorenew">Domain Autorenew</a>
+                  </li>
+                  <li>
+                    <a href="#domain-create-transfer" class="toc-h2 toc-link" data-title="Domain Create/Transfer">Domain Create/Transfer</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#contact" class="toc-h1 toc-link" data-title="Contact">Contact</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#contact-index" class="toc-h2 toc-link" data-title="Contact Index">Contact Index</a>
+                  </li>
+                  <li>
+                    <a href="#contact-get" class="toc-h2 toc-link" data-title="Contact Get">Contact Get</a>
+                  </li>
+                  <li>
+                    <a href="#contact-update" class="toc-h2 toc-link" data-title="Contact Update">Contact Update</a>
+                  </li>
+                  <li>
+                    <a href="#contact-create" class="toc-h2 toc-link" data-title="Contact Create">Contact Create</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user" class="toc-h1 toc-link" data-title="User">User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#user-balance" class="toc-h2 toc-link" data-title="User Balance">User Balance</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/easyname/php-sdk'>PHP SDK 1.0</a></li>
+            <li><a href='mailto:support@easyname.com'>API key anfrage</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='easyname-api'>easyname API</h1>
+<p>Easyname stellt für professionelle und kommerzielle Nutzer eine API zur Verfügung, mit der alles Rund um eine Domain über eine Schnittstelle geregelt werden kann. So kann Easyname in eigene Software und Controlpanels integriert werden.</p>
+<div class="highlight"><pre class="highlight plaintext"><code>
+
+                                                       ___    ____  ____
+  ___  ____ ________  ______  ____ _____ ___  ___     /   |  / __ \/  _/
+ / _ \/ __ `/ ___/ / / / __ \/ __ `/ __ `__ \/ _ \   / /| | / /_/ // /
+/  __/ /_/ (__  ) /_/ / / / / /_/ / / / / / /  __/  / ___ |/ ____// /
+\___/\__,_/____/\__, /_/ /_/\__,_/_/ /_/ /_/\___/  /_/  |_/_/   /___/
+               /____/
+
+
+</code></pre></div>
+<p>Auf den folgenden Seiten finden sich die technische Dokumentation zur API, sowie nützliche Informationen zu einzelnen Kommandos. Sollten weitere Fragen oder technische Probleme bei der Integration der API auftreten, so kontaktieren Sie bitte den Support.</p>
+
+<aside class="notice">
+Wenn Sie an einer Nutzung der API interessiert sind, kontaktieren Sie bitte unser Support-Team für weitere Informationen
+</aside>
+<h1 id='rest-basics'>REST Basics</h1>
+<p>Die API basiert grundsätzlich auf dem Konzept von REST Web Serivces. So werden einzelne Resourcen (Domain, Contact, Emailbox, …) definiert und auf diese Operationen ausgeführt. Über die Kombination HTTP Request Method + URI werden die Resourcen und Operationen angesprochen.</p>
+
+<p>Die API ist unter folgendem Hostnamen ausschließlich per HTTPS zu erreichen: <em>api.easyname.com</em></p>
+
+<p>Entsprechend dem Konzept von REST Web Services sind die URIs in Kombination mit der HTTP Request Method wie folgt aufgebaut.</p>
+<h2 id='http-request-method-get'>HTTP Request Method GET</h2><h3 id='liste-der-resource-elemente'>Liste der Resource-Elemente</h3><div class="highlight"><pre class="highlight plaintext"><code>GET /&lt;resource&gt;
+</code></pre></div>
+<blockquote>
+<p>Beispiel:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>GET /domain?limit=50&amp;offset=200
+</code></pre></div>
+<p>Listet alle Elemente einer Resource auf. Es werden max. 50 Elemente zurück gegeben. Für die Auflistung weiterer Elemente sind die optionalen Parameter limit und offset zu benutzen.
+Optionale Parameter:</p>
+
+<ul>
+<li>limit</li>
+<li>offset</li>
+</ul>
+<h3 id='einzelnes-resource-element'>Einzelnes Resource-Element</h3>
+<p>Gibt das durch <id> spezifizierte Element der Resource zurück.</p>
+<div class="highlight"><pre class="highlight markdown"><code>GET /<span class="nt">&lt;resource&gt;</span>/<span class="nt">&lt;id&gt;</span>
+</code></pre></div><h2 id='http-request-method-post'>HTTP Request Method POST</h2><h3 id='neue-resource-erstellen'>Neue Resource erstellen</h3><div class="highlight"><pre class="highlight plaintext"><code>POST /&lt;resource&gt;
+</code></pre></div>
+<p>Erstellt eine neue Resource</p>
+<h3 id='bestehende-resource-updaten-allgemein'>Bestehende Resource updaten (allgemein)</h3><div class="highlight"><pre class="highlight plaintext"><code>POST /&lt;resource&gt;/&lt;id&gt;
+</code></pre></div>
+<p>Updated das durch <id> spezifizierte Element der Resource
+Kann optional auch mit der HTTP Request Method PUT ausgeführt werden.</p>
+
+<p>Spezielle Operation auf bestehende Resource ausführen</p>
+<div class="highlight"><pre class="highlight plaintext"><code>POST /&lt;resource&gt;/&lt;id&gt;/&lt;perform-command&gt;
+</code></pre></div>
+<p>Updated das durch <id> spezifizierte Element der Resource, führt dabei aber kein gewöhnliches Update aus, sondern es wird dabei das in <perform-command> spezifizierte Command ausgeführt.
+Kann optional auch mit der HTTP Request Method PUT ausgeführt werden.</p>
+<h2 id='http-request-method-delete'>HTTP Request Method DELETE</h2>
+<p>Diese Request Method wird nicht unterstützt. Sollte ein Element einer Resource löschbar sein, so wird dies explizit bei der Resource beschrieben.</p>
+<h1 id='request-response'>Request / Response</h1>
+<p>Alle Anfragen, die mittels POST gestellt werden, müssen im HTTP_RAW_DATA_POST einen Body übermitteln. Dieser Body darf ausschließlich einen JSON-encoded String enthalten, der im folgenden beschrieben wird.</p>
+<h2 id='aufbau-des-body-allgemein'>Aufbau des Body (allgemein)</h2>
+<blockquote>
+<p>Der JSON-encoded String hat folgende Struktur:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"&lt;key&gt;"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;value&gt;"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234567890</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;signature&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Der timestamp ist ein UNIX-Timestamp und muss der aktuellen Zeit in UTC entsprechen.</p>
+</blockquote>
+<h2 id='berechnung-der-signatur'>Berechnung der Signatur</h2>
+<blockquote>
+<p><strong>Beispiel</strong></p>
+
+<p>Signing-Salt:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>SuperSecretSigningSalt
+</code></pre></div>
+<blockquote>
+<p>Daten:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-03-05"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"trustee"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"purchased"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-03-05"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234567890</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;signature&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Daraus ergibt sich folgende Sortierung der Keys:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>domain, expire, id, purchased, timestamp, trustee
+</code></pre></div>
+<blockquote>
+<p>und folgender String nach aneinanderfügen der Werte und den String teilen:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>example.com 2015-03-05 123420 10-03-05 1234567890
+example.com 2015-03-05 123420 10-03-05 1234567890
+</code></pre></div>
+<p>Um die Authentizität der Daten zu gewährleisten, hat jede Anfrage, die mittels POST oder PUT gestellt wird, eine Signatur zu beinhalten. Diese Signatur wird wie folgt berechnet.</p>
+
+<ul>
+<li>Alle Keys aus data einschließlich des Timestamps müssen in aufsteigender Reihenfolge sortiert werden. Bei Listen ist zusätzlich auf die Reihenfolge der Elemente in der Liste zu achten!</li>
+<li>Anhand dieser Sortierung sind alle Werte der Keys aneinander zu fügen</li>
+<li>Dieser String ist in der Hälfte zu teilen (bei ungerader Zeichenanzahl: Länge + 1)</li>
+<li>Zwischen den beiden Hälften ist der zur Verfügung gestellte Signing-Salt einzufügen</li>
+<li>Daraus ist ein MD5-Hash zu bilden, welcher Base64-encoded an den Request anzufügen ist</li>
+</ul>
+
+<aside class="notice">
+Ein GET-Request benötigt beim Request keine Signatur, die Response wird jedoch signiert.
+</aside>
+
+<aside class="notice">
+Eine Signatur ist auch zu übermitteln wenn bei einem POST-Request keine Daten in data übermittelt werden.
+</aside>
+
+<aside class="warning">
+Sollten Sie einen Fehler als Response erhalten, so wird keine Signatur angefügt.
+</aside>
+
+<aside class="warning">
+Bitte beachten Sie, dass der boolsche Wert false in PHP einen leeren String ergibt, true hingegen 1 (Zahl eins)
+</aside>
+
+<blockquote>
+<p>Folgender String muss nun zuerst MD5-gehasht und danach Base64-encodet werden:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>example.com 2015-03-05 12SuperSecretSigningSalt34 2010-03-05 1234567890
+</code></pre></div>
+<blockquote>
+<p>Der ergibt folgende Signatur, die dann mitgeschickt werden muss:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>NDQ3ZWM3NWVlYzkwY2UxZDdkNjNiMzk4ZmNkYmRiOGY=
+</code></pre></div>
+<blockquote>
+<p><strong>Beispiel 2</strong>
+Daten:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-03-05"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"trustee"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"purchased"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-03-05"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2548</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo.at"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-04-09"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"trustee"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"purchased"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-04-09"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3658</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar.de"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-08-08"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"trustee"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"purchased"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-08-08"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234567890</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;signature&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Daraus ergibt sich folgende Sortierung der Keys:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>domain, expire, id, purchased, trustee, domain, expire, id, purchased, trustee, domain, expire, id, purchased, trustee, timestamp
+</code></pre></div>
+<blockquote>
+<p>und folgender String nach aneinanderfügen der Werte:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>example.com 2015-03-05 123420 10-03-05 foo.at 2013-04-09 254820 11-04-09 bar.de 2013-08-08 3658 2010-08-08 11234567890
+</code></pre></div>
+<blockquote>
+<p>Die weitere Vorgehensweise entspricht dem vorangehenden Beispiel. Das Ergebnis ist folgende Signatur:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>NGRmNmUwZDkwNzc0M2JiNzc0ZjEyOWE1NmE3ZTdjZDQ=
+</code></pre></div><h2 id='aufbau-des-antwort-body'>Aufbau des Antwort-Body</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"&lt;key&gt;"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;value&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(success|pending|warning|error|systemerror)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;return-code|error-code&gt;</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;message&gt;"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234567890</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;signature&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Der Antwort-Body entspricht weitesgehendst dem allgemeinen Body, es wird jedoch eine <a href="http://devblog.easyname.eu/api/status-codes/">Statusinformation</a> zur ausgeführten Anfrage hinzugefügt.</p>
+
+<p>Es wird empfohlen die Signatur der Antwort zu verifizieren.</p>
+
+<p>Statusinformationen fließen nicht in die Signatur mit ein.</p>
+<h2 id='http-status-codes'>HTTP Status Codes</h2>
+<p>Es entspricht dem Konzept des RESTful Web Service, dass die vorhandenen HTTP Status Codes genutzt werden, um den Status der Anfrage mitzuteilen. Da Easyname jedoch ein sehr komplexes System ist, dienen die HTTP Status Codes nur dazu, den allgemeinen Status einer Anfrage mitzuteilen. Der genaue Status der Anfrage ist, wie bereits erwähnt, dem Antwort-Body zu entnehmen.</p>
+
+<p>Folgende Status Codes werden verwendet:</p>
+
+<ul>
+<li><strong>200 OK</strong>: Der Auftrag wurde entgegen genommen und bereits verarbeitet.</li>
+<li><strong>202 Accepted</strong>: Der Auftrag wurde entgegen genommen und wurde zur weiteren Verarbeitung eingereiht bzw- zur weiteren Verarbeitung an externe Stellen (z.B. Domainregistry) übermittelt.</li>
+<li><strong>400 Bad Request</strong>: Die Anfrage an sich ist fehlerhaft. Dieser Fehler schließt auch Validierungsfehler mit ein!</li>
+<li><strong>404 Page Not Found</strong>: die verwendete URL/URI ist nicht gültig.</li>
+<li><strong>500 Internal Server Error</strong>: Bei der Verarbeitung ist ein unerwarteter Fehler aufgetreten. Der Fehler wurde entsprechend protokolliert und an das Entwicklungs-Team weiter gegeben.</li>
+<li><strong>503 Service unavailable</strong>: Das Anfrage-Limit pro Minute/Stunde/Tag wurde überschritten oder die API steht derzeit wegen Wartungsarbeiten nicht zur Verfügung (bitte beachten Sie entsprechende Ankündigungen)</li>
+</ul>
+<h1 id='authentifizierung'>Authentifizierung</h1>
+<p>Die Authentifizierung für die Benutzung der API erfolgt mittels HTTP Headern.</p>
+
+<aside class="warning">
+Die Header für die Authentifizierung müssen bei jeder Anfrage mitgeschickt werden.
+</aside>
+<h2 id='header'>Header</h2>
+<blockquote>
+<p>Folgende Header sind erforderlich:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>X-User-ApiKey:
+X-User-Authentication:
+Accept: application/json
+</code></pre></div><h3 id='x-user-apikey'>X-User-ApiKey</h3>
+<blockquote>
+<p>Beispiel:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>User-ID: 123
+Email: support@easyname.eu
+Signing123TopSecretsupport@easyname.euAuth00
+</code></pre></div>
+<p>Der von Easyname vergebene API-Key ist immer im Header mitzuschicken. Ohne diesen API-Key kann keine Authentifizierung stattfinden.</p>
+<h3 id='x-user-authentication'>X-User-Authentication</h3>
+<p>Um zu verifizieren ob die Anfrage auch tatsächlich von dem Inhaber des API-Keys stammt, ist für jede Anfrage ein Authentication-String zu generieren und mit zu senden.</p>
+
+<p>Für die Authentifizierung wird ein eigenes Salt zur Verfügung gestellt, welches 2 Marker besitzt, die ersetzt werden müssen.</p>
+
+<p><strong>Beispiel</strong>: Signing%sTopSecret%sAuth00</p>
+
+<p>Das erste %s muss durch die User-ID ersetzt werden, das zweite %s muss durch die Emailadresse ersetzt werden.</p>
+
+<aside class="warning">
+Ändert sich die Emailadresse, so muss dies bei Verwendung der API auch entsprechend berücksichtigt werden.
+</aside>
+
+<p>Aus diesem String ist nun ein MD5-Hash zu bilden, welcher Base64-encoded im Header X-User-Authentication mit zu schicken ist.</p>
+
+<aside class="warning">
+Das Salt zur Authentifizierung darf niemals in Plain-Text übermittelt werden.
+</aside>
+<h1 id='status-codes'>Status Codes</h1>
+<p>Status Codes liefern mittels eines fünfstelligen, nummerischen Wertes den Status des ausgeführten Kommandos zurück. Auch Fehler werden als Status Code abgebildet.</p>
+
+<p>Grundsätzlich können Status Codes in fünf Gruppen eingeteilt werden:</p>
+
+<ul>
+<li>Success (1xxxx)</li>
+<li>Pending (2xxxx)</li>
+<li>Warning (3xxxx)</li>
+<li>Error (6xxxx)</li>
+<li>Systemerror (7xxxx)</li>
+</ul>
+
+<p>Eine Übersicht über alle Status- und Errorcodes finden sich <a href="images/api-statuscodes-errorcodes.pdf">hier</a>.</p>
+<h1 id='php-sdk'>PHP-SDK</h1>
+<p>Easyname REST API client sample usage</p>
+
+<p>Get the easyname php-sdk: <a href="https://github.com/easyname/php-sdk">github repo</a></p>
+
+<blockquote>
+<p>Create a config file with your credentials</p>
+</blockquote>
+<div class="highlight"><pre class="highlight php tab-php"><code>
+<span class="c1"># config.php</span>
+<span class="o">&lt;?</span>
+<span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'url'</span> <span class="o">=&gt;</span> <span class="s1">'https://api.easyname.com'</span><span class="p">,</span>
+    <span class="s1">'user'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">'id'</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'foo@example.org'</span>
+    <span class="p">),</span>
+    <span class="s1">'api'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">'key'</span> <span class="o">=&gt;</span> <span class="s1">'aaaaaaa'</span><span class="p">,</span>
+        <span class="s1">'authentication-salt'</span> <span class="o">=&gt;</span> <span class="s1">'aaaaaaaa%sbbbbbbbb%scccccccc'</span><span class="p">,</span>
+        <span class="s1">'signing-salt'</span> <span class="o">=&gt;</span> <span class="s1">'AaaBbbCccDddEeeFffGggHhh'</span>
+    <span class="p">),</span>
+    <span class="s1">'debug'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Instantiate the client and call one of the methods it provides</p>
+</blockquote>
+<div class="highlight"><pre class="highlight php tab-php"><code>
+<span class="cp">&lt;?php</span>
+<span class="cd">/**
+ * Easyname REST API client sample usage.
+ *
+ * @copyright  2006-2021 easyname GmbH (http://www.easyname.com)
+ * @license    easyname License Agreement
+ */</span>
+
+<span class="nb">ini_set</span><span class="p">(</span><span class="s1">'date.timezone'</span><span class="p">,</span> <span class="s1">'UTC'</span><span class="p">);</span>
+
+<span class="k">require_once</span> <span class="s1">'src/Easyname/RestApi/Client.php'</span><span class="p">;</span>
+<span class="k">require_once</span> <span class="s1">'src/Easyname/RestApi/Exception.php'</span><span class="p">;</span>
+
+<span class="nv">$result</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="k">new</span> <span class="err">\</span><span class="nf">Easyname\RestApi\Client</span><span class="p">(</span>
+    <span class="k">include</span> <span class="s1">'config.php'</span>
+<span class="p">);</span>
+<span class="cm">/*
+ * Domain
+ */</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$api</span><span class="o">-&gt;</span><span class="nf">listDomain</span><span class="p">();</span>
+<span class="c1">//$result = $api-&gt;getDomain(1);</span>
+<span class="c1">//$result = $api-&gt;createDomain("example.com", 23, 23, 23, 23, array(), false);</span>
+<span class="c1">//$result = $api-&gt;transferDomain("example.com", 23, 23, 23, 23, array(), false, 'aaaaaa');</span>
+<span class="c1">//$result = $api-&gt;changeOwnerOfDomain(1, 23);</span>
+<span class="c1">//$result = $api-&gt;changeContactOfDomain(1, 23, 23, 23);</span>
+<span class="c1">//$result = $api-&gt;changeNameserverOfDomain(1, array('ns1.example.com', 'ns2.example.com'));</span>
+<span class="c1">//$result = $api-&gt;expireDomain(1);</span>
+<span class="c1">//$result = $api-&gt;unexpireDomain(1);</span>
+<span class="c1">//$result = $api-&gt;deleteDomain(1);</span>
+<span class="c1">//$result = $api-&gt;restoreDomain(1);</span>
+
+<span class="cm">/*
+ * Contact
+ */</span>
+<span class="c1">//$result = $api-&gt;listContact();</span>
+<span class="c1">//$result = $api-&gt;getContact(1);</span>
+<span class="c1">//$result = $api-&gt;createContact('person', 'John Doe (person)', 'John Doe', 'Street 12/34', '1234', 'Vienna', 'AT', '+4312345678', 'me@example.com', array('birthday' =&gt; '1970-01-31'));</span>
+<span class="c1">//$result = $api-&gt;updateContact(1, 'John Doe (person)', 'Other Street 56/7', '1234', 'Vienna', '+4312345678', 'me@example.com', array('birthplaceCity' =&gt; 'Vienna'));</span>
+<span class="c1">//$result = $api-&gt;deleteContact(1);</span>
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+</code></pre></div><h1 id='domain'>Domain</h1>
+<p>Die Domain-Resource bildet die Registrierung, den Transfer sowie die gesamte Verwaltung einer Domain ab. Es ist dabei zu beachten, das unterschiedliche Topleveldomains teilweise Kommandos nicht unterstützen oder z.B. andere Fristen (z.B. für die Kündigung) haben. Auch das Verhalten von unterschiedlichen Topleveldomains in bestimmten Situationen kann abweichen.</p>
+
+<aside class="warning">
+Bitte beachten Sie insbesondere das unterschiedliche Verhalten, wenn eine Domain nicht fristgerecht verlängert oder gekündigt wird. Für einen eventuellen, kostenpflichtigen Restore aus der sog. RedemptionPeriod kontaktieren Sie bitte unser Support-Team
+</aside>
+
+<aside class="notice">
+Sollten Sie konkrete Informationen zu einer Topleveldomain benötigen, kontaktieren Sie bitte unser Support-Team
+</aside>
+<h2 id='domain-generate-authcode'>Domain Generate Authcode</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/generateauthcode
+</code></pre></div>
+<p>Generiert einen Authcode für eine Domain und sendet diesen zur Registry. Der generierte Authcode hat eine Lebensdauer (siehe Domain -&gt; authcodeValidUntil). Nach erreichen der Lebensdauer ist der Authcode nicht mehr gültig und muss neu generiert werden. Während der Lebensdauer kann kein neuer Authcode generiert werden.</p>
+
+<aside class="notice">
+Diese Operation wird derzeit nur für .de Domains benötigt.
+</aside>
+
+<aside class="cost">
+Diese Operation kann ggf. Kosten verursachen
+</aside>
+<h3 id='input'>Input</h3>
+<p>Es werden keine Inputdaten benötigt</p>
+<h3 id='output'>Output</h3>
+<p>Es werden keine Daten zurück gegeben, sondern lediglich eine Statusmeldung</p>
+<h2 id='domain-transfersecurity'>Domain Transfersecurity</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/transfersecurity
+</code></pre></div>
+<p>Setzt bzw. hebt eine Transfersperre wieder auf. Die Transfersperre verhindert, das die Domain zu einem anderen Registrar/Provider transferiert werden kann.</p>
+<h3 id='input-2'>Input</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>transferAllowed</td>
+<td>Y</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='output-2'>Output</h3>
+<p>Es werden keine Daten zurück gegeben, sondern lediglich eine Statusmeldung</p>
+<h2 id='domain-restore'>Domain Restore</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/restore
+</code></pre></div>
+<p>Ein Domain Restore kann derzeit nur für .at-Domains (inkl. .co.at, .or.at) ausgeführt werden. Er holt eine Domain, die im Zuge einer versäumten Verlängerung an die zuständige Registrierungsstelle zurück gegeben wurden, wieder von dieser zurück zu Easyname.</p>
+
+<aside class="cost">
+Diese Operation verursacht Kosten.
+</aside>
+<h3 id='input-3'>Input</h3>
+<p>Es werden keine Inputdaten benötigt</p>
+<h3 id='output-3'>Output</h3>
+<p>Es werden keine Daten zurück gegeben, sondern lediglich eine Statusmeldung</p>
+<h2 id='domain-ownerchange'>Domain Ownerchange</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/ownerchange
+</code></pre></div>
+<p>Der Inhaberwechsel, auch Ownerchange genannt, wechselt, wie der Name schon sagt, den Inhaber einer Domain.</p>
+
+<p>Ein Inhaberwechsel kann nur durchgeführt werden, wenn:</p>
+
+<ul>
+<li>Die Topleveldomain einen Inhaberwechsel unterstützt</li>
+<li>Der neue Kontakt ggf. zusätzliche Daten lt. Vorgaben der Topleveldomain aufweist</li>
+<li>Der neue Kontakt die Restriktionen der Topleveldomain erfüllt</li>
+</ul>
+
+<p>Ein Trustee kann derzeit im Zuge eines Ownerchanges nicht bestellt/abbestellt werden.</p>
+
+<aside class="cost">
+Dieses Operation kann Kosten verursachen.
+</aside>
+
+<aside class="warning">
+Es kann vorkommen, das die Registry eine Email an den aktuellen Inhaber sendet, welcher den Inhaberwechsel bestätigen muss. Bitte achten Sie vor dem Start eines Inhaberwechsels darauf, das die Emailadresse des aktuellen Inhabers aktiv ist und die Email nicht einem Spamfilter zum Opfer fällt
+</aside>
+
+<aside class="warning">
+Je nach Topleveldomain müssen ggf. auch schriftliche Bestätigungen vom aktuellen und neuen Inhaber unterschrieben an den Easyname Support übermittelt werden. Erst dann kann der Auftrag zum Inhaberwechsel weiter bearbeitet werden.
+</aside>
+
+<aside class="warning">
+Beachten Sie das ein Inhaberwechsel bei einigen Topleveldomains einen Reset der Registrierungsperiode bedeutet. In einem derartigen Fall ist ggf. auch ein Trustee neu zu bezahlen.
+</aside>
+<h3 id='input-4'>Input</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>registrantContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+</tbody></table>
+<h3 id='output-4'>Output</h3>
+<p>Es werden keine Daten zurück gegeben, sondern lediglich eine Statusmeldung</p>
+<h2 id='domain-nameserverchange'>Domain Nameserverchange</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/nameserverchange
+</code></pre></div>
+<p>Ändert die Nameserver einer Domain.</p>
+
+<p>Die Nameserver können nur geändert werden, wenn:</p>
+
+<ul>
+<li>Die Domain keine sonstigen ausstehenden Updates hat</li>
+<li>Die Nameserver vom Hostnamen her unique sind</li>
+<li>Die Nameserver aufgelöst werden können</li>
+<li>Die Nameserver von der IP-Adresse her unique sind</li>
+<li>Die min./max. Nameservers den Vorgaben der Topleveldomain entsprechen</li>
+<li>Alle Kontakte ggf. zusätzliche Daten lt. Vorgaben der Topleveldomain aufweisen</li>
+<li>Alle Kontakte die Restriktionen der Topleveldomain erfüllen</li>
+</ul>
+
+<aside class="cost">
+Diese Operation kann Kosten verursachen.
+</aside>
+
+<aside class="warning">
+Durch fehlerhafte Nameserverkonfiguration kann die Domain ihre technische Erreichbarkeit verlieren. Stellen Sie vor einem Nameserverchange sicher, das die angegebenen Nameserver funktionieren und für diese Domain zuständig sind.
+</aside>
+
+<aside class="notice">
+Bitte beachten Sie die besonderen Bedingungen für Nameserver bei .hu-Domains(http://www.domain.hu/domain/English/regcheck/) und .fr-Domains (http://www.nic.fr/en/products-and-services/services/zonecheck/)
+</aside>
+<h3 id='input-5'>Input</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>nameserver1</td>
+<td>N</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='output-5'>Output</h3>
+<p>Es werden keine Daten zurück gegeben, sondern lediglich eine Statusmeldung</p>
+<h2 id='domain-index'>Domain Index</h2><div class="highlight"><pre class="highlight plaintext"><code>GET /domain
+</code></pre></div>
+<p>Holt eine Liste aller aktiven Domains.</p>
+
+<aside class="notice">
+Bitte beachten Sie die zusätzlichen Parameter limit und offset.
+</aside>
+<h3 id='output-6'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>domain</td>
+<td>string</td>
+<td>Submit domain with UTF-8 characters, not in Punycode</td>
+</tr>
+<tr>
+<td>domainIdn</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver1</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>registrantContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>adminContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>autoRenew</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>transferAllowed</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>trusteePaidUntil</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>purchased</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>expire</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>renewal</td>
+<td>date</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='domain-get'>Domain Get</h2><div class="highlight"><pre class="highlight plaintext"><code>GET /domain/&lt;id&gt;
+</code></pre></div>
+<p>Holt das über <id> spezifizierte Domain-Objekt.</p>
+<h3 id='output-7'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>domain</td>
+<td>string</td>
+<td>Submit domain with UTF-8 characters, not in Punycode</td>
+</tr>
+<tr>
+<td>domainIdn</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver1</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>registrantContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>adminContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>autoRenew</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>transferAllowed</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>trusteePaidUntil</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>purchased</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>expire</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>renewal</td>
+<td>date</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='domain-unexpire'>Domain Unexpire</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/unexpire
+</code></pre></div>
+<p>Holt eine Domain wieder aus dem Status EXPIRE heraus.</p>
+<h3 id='input-6'>Input</h3>
+<p>Es werden keine Inputdaten benötigt</p>
+<h3 id='output-8'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>domain</td>
+<td>string</td>
+<td>Submit domain with UTF-8 characters, not in Punycode</td>
+</tr>
+<tr>
+<td>domainIdn</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver1</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>registrantContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>adminContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>autoRenew</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>transferAllowed</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>trusteePaidUntil</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>purchased</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>expire</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>renewal</td>
+<td>date</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='domain-expire'>Domain Expire</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/expire
+</code></pre></div>
+<p>Setzt eine Domain auf den Status EXPIRE, d.h. mit Ende der Registrierungszeit wird die Domain gelöscht.</p>
+
+<aside class="notice">
+Befindet sich die Domain bereits innerhalb der Kündigungsfrist, so kann sie nicht mehr in den Status EXPIRE versetzt werden.
+</aside>
+<h3 id='input-7'>Input</h3>
+<p>Es werden keine Inputdaten benötigt</p>
+<h3 id='output-9'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>domain</td>
+<td>string</td>
+<td>Submit domain with UTF-8 characters, not in Punycode</td>
+</tr>
+<tr>
+<td>domainIdn</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver1</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>registrantContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>adminContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>autoRenew</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>transferAllowed</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>trusteePaidUntil</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>purchased</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>expire</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>renewal</td>
+<td>date</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='domain-delete'>Domain Delete</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/delete
+</code></pre></div>
+<p>Löscht eine Domain bei der zuständigen Registrierungsstelle.</p>
+
+<aside class="warning">Das Löschen einer Domain führt dazu, das diese direkt bei der zuständigen Registrierungsstelle gelöscht wird und somit technisch nicht mehr erreichbar ist. Es ist nicht gewährleistet, dass eine Domain sofort nach dem Löschen wieder neu registriert werden kann (vgl. RedemptionPeriod).</aside>
+<h3 id='input-8'>Input</h3>
+<p>Es werden keine Inputdaten benötigt</p>
+<h3 id='output-10'>Output</h3>
+<p>Es werden keine Daten zurück gegeben, sondern lediglich eine Statusmeldung</p>
+<h2 id='domain-contactchange'>Domain Contactchange</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/contactchange
+</code></pre></div>
+<p>Ein Contactchange, auch Handlechange genannt, werden die Kontakte für Admin-C, Tech-C und Zone-C ausgetauscht. Sollte der Inhaber getauscht werden, so ist ein <a href="https://devblog.easyname.eu/rest/domain/domain-ownerchange/">Inhaberwechsel (Ownerchange)</a> durchzuführen.</p>
+
+<p>Durchführbar ist ein Contactchange nur dann, wenn</p>
+
+<ul>
+<li>die Topleveldomain dies unterstützt</li>
+<li>alle Kontakte ggf. zusätzliche Daten lt. Vorgaben der Topleveldomain aufweisen</li>
+<li>alle Kontakte die Restriktionen der Topleveldomain erfüllen</li>
+<li>jeder einzelne Kontakt keine ausständigen Updates mehr hat</li>
+<li>die Domain keine ausständigen Updates mehr hat</li>
+</ul>
+
+<p>Ein Trustee kann derzeit im Zuge eines Contactchanges nicht bestellt/abbestellt werden.</p>
+
+<aside class="cost">Diese Operation kann ggf. Kosten verursachen.</aside>
+
+<aside class="notice">Bitte beachten Sie, es gibt Topleveldomains die nur Personen-Handles als Admin-C, Tech-C oder Zone-C erlauben!</aside>
+<h3 id='input-9'>Input</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>adminContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+</tbody></table>
+<h3 id='output-11'>Output</h3>
+<p>Es werden keine Daten zurück gegeben, sondern lediglich eine Statusmeldung</p>
+<h2 id='domain-autorenew'>Domain Autorenew</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain/&lt;id&gt;/autorenew
+</code></pre></div>
+<p>Aktiviert/deaktiviert die automatische Verlängerung einer Domain. Wird eine Domain nicht automatisch verlängert, so ist die Verlängerung manuell durchzuführen. Wird keine Verlängerung durchgeführt, so wird die Domain je nach Topleveldomain gelöscht oder an die zuständige Registrierungsstelle zurück gegeben.</p>
+
+<aside class="warning">
+Eine Änderung der automatischen Verlängerung innerhalb der Kündigungsfrist ist nicht möglich.
+</aside>
+
+<aside class="notice">
+Die manuelle Verlängerung einer Domain ist derzeit über die API nicht möglich
+</aside>
+<h3 id='input-10'>Input</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>domain</td>
+<td>Y</td>
+<td>string</td>
+<td>Submit domain with UTF-8 characters, not in Punycode</td>
+</tr>
+<tr>
+<td>nameserver1</td>
+<td>N</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>registrantContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>adminContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>trustee</td>
+<td>N</td>
+<td>bool</td>
+<td>If you want to active trustee service, please submit true. Note that trustee service cause extra costs and is also ordered if the requirements/restrictions of the topleveldomain in relation to the contact does not require a trustee.</td>
+</tr>
+<tr>
+<td>transferIn</td>
+<td>N</td>
+<td>bool</td>
+<td>Set true if you want to create a domain through a domain transfer. Note that if you wanna transfer a domain to an other account you will get an error. In this case please contact our support team.</td>
+</tr>
+<tr>
+<td>transferAuthcode</td>
+<td>N</td>
+<td>string</td>
+<td>Only required if you wanna transfer a domain and if the topleveldomain requires a authcode. Note that different topleveldomains have different requirements to the authcode.</td>
+</tr>
+</tbody></table>
+<h3 id='output-12'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>domain</td>
+<td>string</td>
+<td>Submit domain with UTF-8 characters, not in Punycode</td>
+</tr>
+<tr>
+<td>domainIdn</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver1</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>registrantContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>adminContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>autoRenew</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>transferAllowed</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>trusteePaidUntil</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>purchased</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>expire</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>renewal</td>
+<td>date</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='domain-create-transfer'>Domain Create/Transfer</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /domain
+</code></pre></div>
+<p>Das Erstellen einer Domain entspricht einer Neuregistrierung. Sollte ein Transfer der Domain von einem anderen Provider zu Easyname gewünscht sein, so ist das entsprechende Flag und ggf. der AuthCode zu setzen!</p>
+
+<aside class="warning">Ist ein Transfer von einem Easyname-Konto in ein anderes gewünscht, so kann dies nicht über die API erledigt werden. Bitte wenden Sie sich dazu an den Support.</aside>
+
+<p>Eine Domain kann nur dann registriert/transferiert werden, wenn:</p>
+
+<ul>
+<li>Die Topleveldomain von Easyname unterstützt wird</li>
+<li>Der Domainname entsprechend den Vorgaben (min./max. Länge, IDN) der Topleveldomain gültig ist</li>
+<li>Ggf. angegebene Nameserver korrekt sind (Details siehe Nameserver Change)</li>
+<li>Alle Kontakte ggf. zusätzliche Daten lt. Vorgaben der Topleveldomain aufweisen</li>
+<li>Alle Kontakte die Restriktionen der Topleveldomain erfüllen oder ein Trustee aktiviert wurde (sofern verfügbar)</li>
+</ul>
+
+<aside class="cost">Bei dieser Operation entstehen Kosten!</aside>
+
+<aside class="warning">Es wird vor der Registierung nicht überprüft, ob die Domain noch frei ist. Dies ist vor dem API-Call selbstständig zu überprüfen.</aside>
+<h3 id='input-11'>Input</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>domain</td>
+<td>Y</td>
+<td>string</td>
+<td>Submit domain with UTF-8 characters, not in Punycode</td>
+</tr>
+<tr>
+<td>nameserver1</td>
+<td>N</td>
+<td>string</td>
+<td>Only submit custom nameservers if you want to use your own nameservers. Gluerecords are only allowed for the same domain, e.g. example.com --&gt; ns1.example.com/1.2.3.4. Please fill nameserver-fields in ascending order without gaps. Note that different topleveldomains requires different number of nameservers.</td>
+</tr>
+<tr>
+<td>nameserver2</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver3</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver4</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver5</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>nameserver6</td>
+<td>N</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>registrantContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>adminContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>techContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>zoneContact</td>
+<td>Y</td>
+<td>int</td>
+<td>Please use the ID of the desired contact. Note that different topleveldomains have different requirements to contacts.</td>
+</tr>
+<tr>
+<td>trustee</td>
+<td>N</td>
+<td>bool</td>
+<td>If you want to active trustee service, please submit true. Note that trustee service cause extra costs and is also ordered if the requirements/restrictions of the topleveldomain in relation to the contact does not require a trustee.</td>
+</tr>
+<tr>
+<td>transferIn</td>
+<td>N</td>
+<td>bool</td>
+<td>Set true if you want to create a domain through a domain transfer. Note that if you wanna transfer a domain to an other account you will get an error. In this case please contact our support team.</td>
+</tr>
+<tr>
+<td>transferAuthcode</td>
+<td>N</td>
+<td>string</td>
+<td>Only required if you wanna transfer a domain and if the topleveldomain requires a authcode. Note that different topleveldomains have different requirements to the authcode.</td>
+</tr>
+</tbody></table>
+<h1 id='contact'>Contact</h1>
+<p>Kontakte (oftmals auch als Handles bezeichnet), dienen dazu, eine Domain einer Person/Organisation zu zuweisen (Inhaber) sowie spezielle Kontakttypen wie z.B. Admin-C, Tech-C, Zone-C für eine Domain zu benennen.</p>
+
+<p>Ein Kontakt kann für beliebig viele Domains und Einsatzzwecke (Owner-C, Admin-C, Tech-C, Zone-C) verwendet werden. Kontakte können unabhängig von Domains erstellt und bearbeitet werden. Ist ein Kontakt jedoch mit einer/mehrere Domains verknüpft, so scheinen nach einem Update im Whois der Domain die geänderten Daten auf.</p>
+
+<aside class="notice">Es gibt Topleveldomains/Registries, die es nicht erlauben Daten der Kontakte zu ändern oder Daten benötigen, die im Widerspruch zu Daten für andere Topleveldomains stehen. Daher empfiehlt es sich für die Topleveldomains .it und .es stehts eigene Kontakte zu verwenden. Dies kann unangenehmen Situationen und ggf. auch Kosten vorbeugen.</aside>
+<h2 id='contact-index'>Contact Index</h2><div class="highlight"><pre class="highlight plaintext"><code>GET /contact
+</code></pre></div>
+<p>Liefert eine Liste mit allen verfügbaren Contacts zurück.</p>
+
+<aside class="notice">Bitte beachten Sie die zusätzlichen Parameter limit und offset.</aside>
+<h3 id='output'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>defaultContact</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>Type can be &#39;person&#39; or &#39;organisation&#39;. If type is &#39;organisation&#39;, please submit also the name of the company in field company.</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>Note that the address must be a street with a number of the house. Postboxes are not allowed.</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>string</td>
+<td>If you change the zip, please also submit the country.</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>Please submit phonenumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>province</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>provinceCode</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>stateCode</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>company</td>
+<td>string</td>
+<td>Please add to the company name also the legal form of the company</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>string</td>
+<td>Please submit faxnumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>created</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>modified</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>date</td>
+<td>Required format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>birthplaceCity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>birthplaceCountry</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code</td>
+</tr>
+<tr>
+<td>birthplaceState</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>profession</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaIdNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaFormEntity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaTypeEntity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsPass</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>vatId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>taxId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>commercialRegisterNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkLocation</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardDate</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardAuthority</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>hidePhone</td>
+<td>bool</td>
+<td>Phone will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideFax</td>
+<td>bool</td>
+<td>Fax will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideEmail</td>
+<td>bool</td>
+<td>Email will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>locked</td>
+<td>bool</td>
+<td>If locked is true, the contact can not by updated anymore. Also you can not use them for a domain create/update</td>
+</tr>
+<tr>
+<td>tld</td>
+<td>string</td>
+<td>If the contact is restricted to one TLD, the TLD is given here. Otherwise field is</td>
+</tr>
+</tbody></table>
+<h2 id='contact-get'>Contact Get</h2><div class="highlight"><pre class="highlight plaintext"><code>GET /contact/&lt;id&gt;
+</code></pre></div>
+<p>Holt das über <id> spezifizierte Contact-Objekt.</p>
+<h3 id='output-2'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>defaultContact</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>Type can be &#39;person&#39; or &#39;organisation&#39;. If type is &#39;organisation&#39;, please submit also the name of the company in field company.</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>Note that the address must be a street with a number of the house. Postboxes are not allowed.</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>string</td>
+<td>If you change the zip, please also submit the country.</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>Please submit phonenumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>province</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>provinceCode</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>stateCode</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>company</td>
+<td>string</td>
+<td>Please add to the company name also the legal form of the company</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>string</td>
+<td>Please submit faxnumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>created</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>modified</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>date</td>
+<td>Required format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>birthplaceCity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>birthplaceCountry</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code</td>
+</tr>
+<tr>
+<td>birthplaceState</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>profession</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaIdNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaFormEntity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaTypeEntity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsPass</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>vatId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>taxId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>commercialRegisterNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkLocation</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardDate</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardAuthority</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>hidePhone</td>
+<td>bool</td>
+<td>Phone will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideFax</td>
+<td>bool</td>
+<td>Fax will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideEmail</td>
+<td>bool</td>
+<td>Email will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>locked</td>
+<td>bool</td>
+<td>If locked is true, the contact can not by updated anymore. Also you can not use them for a domain create/update</td>
+</tr>
+<tr>
+<td>tld</td>
+<td>string</td>
+<td>If the contact is restricted to one TLD, the TLD is given here. Otherwise field is</td>
+</tr>
+</tbody></table>
+<h2 id='contact-update'>Contact Update</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /contact/&lt;id&gt;
+</code></pre></div>
+<p>Das Update eines Kontakts ist nur dann möglich, wenn</p>
+
+<ul>
+<li>der Kontakt nicht gesperrt ist</li>
+<li>der Kontakt keine ausstehenden Updates hat</li>
+<li>keine Domain, die diesen Kontakt verwendet, ausstehende Updates hat</li>
+<li>alle Domains, die diesen Kontakt verwenden, auch das Update eines Kontakts erlauben</li>
+</ul>
+
+<aside class="notice">Möchten Sie die Felder type, name, company oder country ändern, so ist ein neuer Contact anzulegen und in weiterer Folge ein Contact- bzw. Ownerchange durchzuführen.</aside>
+<h3 id='input'>Input</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Locked</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>Y</td>
+<td>Y</td>
+<td>string</td>
+<td>Type can be &#39;person&#39; or &#39;organisation&#39;. If type is &#39;organisation&#39;, please submit also the name of the company in field company.</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>N</td>
+<td>Y</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 255 </span></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>Y</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>address</td>
+<td>N</td>
+<td>Y</td>
+<td>string</td>
+<td>Note that the address must be a street with a number of the house. Postboxes are not allowed. <br/><span><strong>Validators</strong> <br/> Regular Expression /^([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]<em>?\ ([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]</em>)[A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ])$/<br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>zip</td>
+<td>N</td>
+<td>Y</td>
+<td>string</td>
+<td>If you change the zip, please also submit the country.<br/><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>city</td>
+<td>N</td>
+<td>Y</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>country</td>
+<td>Y</td>
+<td>Y</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code.<br/><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>phone</td>
+<td>N</td>
+<td>Y</td>
+<td>string</td>
+<td>Please submit phonenumber in international format starting with a + and without any whitespaces or brackets<br/><span><strong>Validators</strong> <br/>Regular Expression /^+[0-9]{5,99}/</span></td>
+</tr>
+<tr>
+<td>email</td>
+<td>N</td>
+<td>Y</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>province</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>provinceCode</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>stateCode</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>company</td>
+<td>Y</td>
+<td>N</td>
+<td>string</td>
+<td>Please add to the company name also the legal form of the company<br/><span><strong>Validators</strong> <br/>Regular Expression /^([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]<em>?\ ([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]</em>)[A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ])$/<br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>fax</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td>Please submit faxnumber in international format starting with a + and without any whitespaces or brackets<br/><span><strong>Validators</strong> <br/>Regular Expression /^+[0-9]{5,99}/</span></td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>N</td>
+<td>N</td>
+<td>date</td>
+<td>Required format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>birthplaceCity</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>birthplaceCountry</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code<br/><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>birthplaceState</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>profession</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 200</span></td>
+</tr>
+<tr>
+<td>asiaIdNumber</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>asiaFormEntity</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>asiaTypeEntity</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>aeroEnsId</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 50</span></td>
+</tr>
+<tr>
+<td>aeroEnsPass</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 50 </span></td>
+</tr>
+<tr>
+<td>vatId</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>Regular Expression <br/>/^[a-zA-Z]{2,3}[0-9]{5,14}[0-9a-zA-Z]{1}+$/<br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>taxId</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>Regular Expression <br/>/^[A-Za-z0-9ÄÖÜäöüß-.\,]{1,100}$/<br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>identityCardNumber</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100 </span></td>
+</tr>
+<tr>
+<td>commercialRegisterNumber</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>trademarkNumber</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>trademarkLocation</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>identityCardNumber2</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 50</span></td>
+</tr>
+<tr>
+<td>identityCardDate</td>
+<td>N</td>
+<td>N</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardAuthority</td>
+<td>N</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>hidePhone</td>
+<td>N</td>
+<td>N</td>
+<td>bool</td>
+<td>Phone will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideFax</td>
+<td>N</td>
+<td>N</td>
+<td>bool</td>
+<td>Fax will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideEmail</td>
+<td>N</td>
+<td>N</td>
+<td>bool</td>
+<td>Email will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+</tbody></table>
+<h3 id='output-3'>Output</h3>
+<aside class="notice">
+Sollte ein Update des Contacts bei der Registry notwendig sein, so werden die bestehenden Daten des Contacts retour geliefert (nicht die aktualisierten). Es empfiehlt sich den Statuscode zu beachten.
+</aside>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>defaultContact</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>ype</td>
+<td>tring</td>
+<td>ype can be &#39;person&#39; or &#39;organisation&#39;. If type is &#39;organisation&#39;, please submit also the name of the company in field company.</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>Note that the address must be a street with a number of the house. Postboxes are not allowed.</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>string</td>
+<td>If you change the zip, please also submit the country.</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>Please submit phonenumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>province</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>provinceCode</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>stateCode</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>company</td>
+<td>string</td>
+<td>Please add to the company name also the legal form of the company</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>string</td>
+<td>Please submit faxnumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>created</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>modified</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>date</td>
+<td>Required format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>birthplaceCity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>birthplaceCountry</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code</td>
+</tr>
+<tr>
+<td>birthplaceState</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>profession</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaIdNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaFormEntity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaTypeEntity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsPass</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>vatId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>taxId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>commercialRegisterNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkLocation</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber2</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardDate</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardAuthority</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>hidePhone</td>
+<td>bool</td>
+<td>Phone will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideFax</td>
+<td>bool</td>
+<td>Fax will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideEmail</td>
+<td>bool</td>
+<td>Email will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>locked</td>
+<td>bool</td>
+<td>If locked is true, the contact can not by updated anymore. Also you can not use them for a domain create/update</td>
+</tr>
+<tr>
+<td>tld</td>
+<td>string</td>
+<td>If the contact is restricted to one TLD, the TLD is given here. Otherwise field is</td>
+</tr>
+</tbody></table>
+<h2 id='contact-create'>Contact Create</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /contact
+</code></pre></div>
+<p>Erstellt einen Contact, der in weiterer Folge Domains zugewiesen werden kann.</p>
+<h3 id='input-2'>Input</h3>
+<aside class="notice">In der Regel reichen die mit required markierten Felder vollständig aus, damit ein Contact für eine Domain verwendet werden kann</aside>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Req.</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>Y</td>
+<td>string</td>
+<td>Type can be &#39;person&#39; or &#39;organisation&#39;. If type is &#39;organisation&#39;, please submit also the name of the company in field company.</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>Y</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>address</td>
+<td>Y</td>
+<td>string</td>
+<td>Note that the address must be a street with a number of the house. Postboxes are not allowed.<br/><span><strong>Validators</strong> <br/>Regular Expression /^([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]*?\ ([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]*)[A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ])$/<br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>zip</td>
+<td>Y</td>
+<td>string</td>
+<td>If you change the zip, please also submit the country.<br/><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>city</td>
+<td>Y</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>country</td>
+<td>Y</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code.<span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Y</td>
+<td>string</td>
+<td>Please submit phonenumber in international format starting with a + and without any whitespaces or brackets<br/><span><strong>Validators</strong> <br/>Regular Expression /^+[0-9]{5,99}/</span></td>
+</tr>
+<tr>
+<td>email</td>
+<td>Y</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>province</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>provinceCode</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>stateCode</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>company</td>
+<td>N</td>
+<td>string</td>
+<td>Please add to the company name also the legal form of the company<br/><span><strong>Validators</strong> <br/>Regular Expression /^([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]<em>?\ ([A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ]</em>) [A-Za-zÄÖÜäöüß0-9&amp;\/\,.+-\ ])$/<br/>max. String Length 255</span></td>
+</tr>
+<tr>
+<td>fax</td>
+<td>N</td>
+<td>string</td>
+<td>Please submit faxnumber in international format starting with a + and without any whitespaces or brackets<br/><span><strong>Validators</strong> <br/>Regular Expression /^+[0-9]{5,99}/</span></td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>N</td>
+<td>date</td>
+<td>Required format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>birthplaceCity</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>birthplaceCountry</td>
+<td>N</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code<br/><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>birthplaceState</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>profession</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 200</span></td>
+</tr>
+<tr>
+<td>asiaIdNumber</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>asiaFormEntity</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>asiaTypeEntity</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>aeroEnsId</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 50</span></td>
+</tr>
+<tr>
+<td>aeroEnsPass</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 50</span></td>
+</tr>
+<tr>
+<td>vatId</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>Regular Expression /^[a-zA-Z]{2,3}[0-9]{5,14}[0-9a-zA-Z]{1}+$/ <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>taxId</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>Regular Expression /^[A-Za-z0-9ÄÖÜäöüß-.\,]{1,100}$/<br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>identityCardNumber</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>commercialRegisterNumber</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>trademarkNumber</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 40</span></td>
+</tr>
+<tr>
+<td>trademarkLocation</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 2</span></td>
+</tr>
+<tr>
+<td>identityCardNumber2</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 50</span></td>
+</tr>
+<tr>
+<td>identityCardDate</td>
+<td>N</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardAuthority</td>
+<td>N</td>
+<td>string</td>
+<td><span><strong>Validators</strong> <br/>max. String Length 100</span></td>
+</tr>
+<tr>
+<td>hidePhone</td>
+<td>N</td>
+<td>bool</td>
+<td>Phone will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideFax</td>
+<td>N</td>
+<td>bool</td>
+<td>Fax will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideEmail</td>
+<td>N</td>
+<td>bool</td>
+<td>Email will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+</tbody></table>
+<h3 id='output-4'>Output</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>defaultContact</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>ype can be &#39;person&#39; or &#39;organisation&#39;. If type is &#39;organisation&#39;, please submit also the name of the company in field company.</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>Note that the address must be a street with a numbr of the house. Postboxes are not allowed.</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>string</td>
+<td>f you change the zip, please also submit the country.</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>Submit the ISO3166 Alpha 2 country code.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>Please submit phonenumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>province</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>provinceCode</td>
+<td>strig</td>
+<td></td>
+</tr>
+<tr>
+<td>stateCode</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>company</td>
+<td>string</td>
+<td>Please add to the company name also the legal form of the company</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>string</td>
+<td>Pleas submit faxnumber in international format starting with a + and without any whitespaces or brackets</td>
+</tr>
+<tr>
+<td>created</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>modified</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>date</td>
+<td>Require format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>birthplaceCity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>birthplaceCountry</td>
+<td>strin</td>
+<td>Submit the ISO3166 Alpha 2 country code</td>
+</tr>
+<tr>
+<td>birthplaceState</td>
+<td>sting</td>
+<td></td>
+</tr>
+<tr>
+<td>profession</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaIdNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaFormEntity</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>asiaTypeEntity</td>
+<td>sting</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>aeroEnsPass</td>
+<td>sring</td>
+<td></td>
+</tr>
+<tr>
+<td>vatId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>taxId</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>commercialRegisterNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkNumber</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>trademarkLocation</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardNumber2</td>
+<td>sting</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardDate</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>identityCardAuthority</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>hidePhone</td>
+<td>bool</td>
+<td>Phone will be hidden in the WHOIS-data, if the registry supports his</td>
+</tr>
+<tr>
+<td>hideFax</td>
+<td>bool</td>
+<td>Fax will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>hideEmail</td>
+<td>bool</td>
+<td>Email will be hidden in the WHOIS-data, if the registry supports this</td>
+</tr>
+<tr>
+<td>locked</td>
+<td>bool</td>
+<td>If locked is true, the contact can not by updated anymore. Also you can not use tem for a domain create/update</td>
+</tr>
+<tr>
+<td>tld</td>
+<td>string</td>
+<td>If the contact is restricted to one TLD, the TLD is given here. Otherwise field is</td>
+</tr>
+</tbody></table>
+<h1 id='user'>User</h1>
+<p>Der User entspricht dem Easyname-Konto.</p>
+<h2 id='user-balance'>User Balance</h2><div class="highlight"><pre class="highlight plaintext"><code>POST /user/&lt;id&gt;/balance
+</code></pre></div>
+<p>Liefert den aktuellen Kontostand und Währung zurück.</p>
+
+<aside class="notice">Als <id> kann ausschließlich die eigene Kundennummer verwendet werden.</aside>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="code">code</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
